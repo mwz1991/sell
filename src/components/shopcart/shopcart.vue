@@ -109,7 +109,7 @@
     },
     methods: {
       drop(el) {
-        console.log(el);
+        // console.log(el);
         for (let i = 0; i < this.balls.length; i++) {
           let ball = this.balls[i];
           if (!ball.show) {
@@ -249,18 +249,17 @@
             background: #00b43c
             color #fff
     .ball-container
-      transition all 0.4s
-
       .ball
         position: fixed
         left 32px
         bottom: 22px
         z-index: 200
+        transition all 0.4s cubic-bezier(0.49, -0.29, 0.75, 0.41)
         .inner
           width: 16px
           height: 16px
           border-radius 50%
           background: rgb(0, 160, 220)
-          transition all 0.4s
+          transition all 0.4s linear
 
 </style>
