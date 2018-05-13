@@ -138,17 +138,15 @@
         this._drop(target);
       },
       _drop(target) {
-        this.$refs.shopcart.drop(target);
+        // 体验优化,异步执行下落动画
+        this.$nextTick(() => {
+          this.$refs.shopcart.drop(target);
+        });
       }
     },
     components: {
       shopcart,
       cartcontrol
-    },
-    events: {
-      'cart.add'(target) {
-
-      }
     }
   };
 </script>
